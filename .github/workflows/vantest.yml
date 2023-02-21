@@ -1,12 +1,7 @@
 name: CD Test release
 
 on:
-  workflow_dispatch:
-    inputs:
-      version:
-        type: string
-        required: false
-        description: commit id that needs to be deployed (packages and docker images needs to exist for this version)
+  push:
 
 jobs:
   aaa:
