@@ -17,4 +17,4 @@ jobs:
         - run: echo ${{github.event}}   
         - run: |
             NAME=${{github.event.ref}}
-            echo $(NAME#refs/heads/)
+            echo ${NAME#refs/heads/}
