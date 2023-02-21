@@ -1,0 +1,16 @@
+name: CD Test release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        type: string
+        required: false
+        description: commit id that needs to be deployed (packages and docker images needs to exist for this version)
+
+jobs:
+  aaa:
+    runs-on: ubuntu-latest
+    name: test
+    steps:
+        - run: echo ${{github.event.ref}}
