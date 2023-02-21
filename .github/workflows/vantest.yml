@@ -15,3 +15,6 @@ jobs:
     steps:
         - run: echo ${{github.event.ref}}
         - run: echo ${{github.event}}   
+        - run: |
+            NAME=${{github.event.ref}}
+            echo $(NAME#refs/heads/)
